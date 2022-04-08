@@ -1,0 +1,6 @@
+[submodule "TTT-Web-Front"]
+	path = TTT-Web-Front
+	url = git@github.com:TLMegalovania/TTT-Web-Front.git
+[submodule "TTT-Web-Back"]
+	path = TTT-Web-Back
+	url = git@github.com:TLMegalovania/TTT-Web-Back.git
