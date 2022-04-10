@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build: ./TTT-Web-Front/
+    depends_on:
+      - backend
+    ports:
+      - "${port}:80"
+  backend:
+    depends_on:
+      - redis
+    build: ./TTT-Web-Back/
+  redis:
+    image: redis:alpine
