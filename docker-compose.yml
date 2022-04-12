@@ -9,7 +9,5 @@ services:
     depends_on:
       - redis
     build: ./TTT-Web-Back/
-    ports:
-      - "19198:8080"
   redis:
     image: redis:alpine
