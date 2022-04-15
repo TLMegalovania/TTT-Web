@@ -1,11 +1,17 @@
 services:
   frontend:
     build: ./TTT-Web-Front/
-    depends_on:
-      - backend
     ports:
       - "11451:80"
-  backend:
+  b1:
+    depends_on:
+      - redis
+    build: ./TTT-Web-Back/
+  b2:
+    depends_on:
+      - redis
+    build: ./TTT-Web-Back/
+  b3:
     depends_on:
       - redis
     build: ./TTT-Web-Back/
