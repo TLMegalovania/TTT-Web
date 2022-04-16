@@ -1,12 +1,14 @@
 services:
   frontend:
     build: ./TTT-Web-Front/
+    image: ${frontend_name:-tttweb_frontend}
     ports:
       - "11451:80"
   backend:
     depends_on:
       - redis
     build: ./TTT-Web-Back/
+    image: ${backend_name:-tttweb_backend}
     deploy:
       replicas: 3
   redis:
