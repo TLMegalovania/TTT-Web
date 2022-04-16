@@ -3,17 +3,11 @@ services:
     build: ./TTT-Web-Front/
     ports:
       - "11451:80"
-  b1:
+  backend:
     depends_on:
       - redis
     build: ./TTT-Web-Back/
-  b2:
-    depends_on:
-      - redis
-    build: ./TTT-Web-Back/
-  b3:
-    depends_on:
-      - redis
-    build: ./TTT-Web-Back/
+    deploy:
+      replicas: 3
   redis:
     image: redis:alpine
